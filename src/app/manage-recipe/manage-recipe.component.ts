@@ -15,7 +15,7 @@ export class ManageRecipeComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('recipe') !== null)
-      this.recipeList = JSON.parse(localStorage.getItem('recipe'));
+      this.recipeList = JSON.parse(localStorage.getItem('recipe')|| '{}');
     else
       this.recipeList = [];
   }
@@ -24,7 +24,7 @@ export class ManageRecipeComponent implements OnInit {
       width: '800px'
     });
     dialogRef.afterClosed().subscribe(res => {
-      this.recipeList = JSON.parse(localStorage.getItem('recipe'));
+      this.recipeList = JSON.parse(localStorage.getItem('recipe')|| '{}');
       console.log('added recipe', this.recipeList)
     });
   }

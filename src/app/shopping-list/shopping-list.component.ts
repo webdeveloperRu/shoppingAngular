@@ -20,7 +20,7 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
     console.log(localStorage.getItem('product'))
     if(localStorage.getItem('product') !== null)
-      this.productList = JSON.parse(localStorage.getItem('product'));
+      this.productList = JSON.parse(localStorage.getItem('product')|| '{}');
     else
       this.productList = [];
   }

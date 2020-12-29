@@ -16,14 +16,14 @@ export class RecipeModalComponent implements OnInit {
     this.products = [];
     this.selectedProduct=[];
     if (localStorage.getItem('product') !== null) {
-      this.products = JSON.parse(localStorage.getItem('product'));
+      this.products = JSON.parse(localStorage.getItem('product')|| '{}');
       for (let i = 0; i < this.products.length; i++) {
         this.selectedProduct.push({selected: false})
       }
     }
 
     if (localStorage.getItem('recipe') !== null)
-      this.recipeProductList = JSON.parse(localStorage.getItem('recipe'));
+      this.recipeProductList = JSON.parse(localStorage.getItem('recipe')|| '{}');
     else
       this.recipeProductList = []
   }
