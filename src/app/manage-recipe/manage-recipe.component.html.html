@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: "#demo",
+        template: `<mat-card class="recipe-list-card">
+  <div class="recipe-list-title">Recipes</div>
+  <mat-list role="list" *ngfor="let item of recipeList; index as i">
+    <mat-list-item role="listitem">
+      <div class="recipe-list-item">
+        <div>{{ item.name }}</div>
+        <div>
+          <button
+            mat-icon-button=""
+            color="primary"
+            aria-label="Example icon button with a home icon"
+          >
+            <mat-icon>check_circle_outline</mat-icon>
+          </button>
+          <button
+            mat-icon-button=""
+            aria-label="Example icon button with a menu icon"
+            (click)="deleteRecipe(i)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-divider style="width: 95%; margin-left: 3%"></mat-divider>
+  </mat-list>
+  <button
+    mat-raised-button=""
+    color="primary"
+    class="add-recipe-button"
+    (click)="onAddRecipe()"
+  >
+    Add Recipe
+  </button>
+</mat-card>
+`
+      });
+    </script>
+  </body>
+</html>

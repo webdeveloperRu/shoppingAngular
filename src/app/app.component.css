@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.shopping-list-button {
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.manage-recipe-button {
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}

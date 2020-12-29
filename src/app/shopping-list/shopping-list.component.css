@@ -1,0 +1,20 @@
+.shopping-list-card, .add-product-card {
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
+.shopping-list-item, .check-list-item{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.shopping-list-title, .add-product-title, .check-list-title {
+  font-size: 20px;
+}
+.add-product-form {
+  margin-top: 20px;
+ }
+ .add-product-button{
+  height: 40px;
+}
