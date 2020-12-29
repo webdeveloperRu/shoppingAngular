@@ -16,20 +16,24 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ManageRecipeComponent} from './manage-recipe/manage-recipe.component';
 import { RecipeModalComponent } from './recipe-modal/recipe-modal.component';
+import { RecipeViewModalComponent } from './recipe-view-modal/recipe-view-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingListComponent,
     ManageRecipeComponent,
     RecipeModalComponent,
+    RecipeViewModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
